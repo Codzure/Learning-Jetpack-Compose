@@ -4,6 +4,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -34,7 +38,9 @@ fun ScreenOne(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             //MyComposableUI()
-            HorizontalUI()
+            //HorizontalUI()
+            //ColumnLazy()
+            RowLazy()
         }
     }
 }
@@ -77,11 +83,45 @@ private fun HorizontalUI(){
             text = "Hello World",
             fontWeight = FontWeight.Bold,
             maxLines = 1,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.padding(4.dp)
         )
 
         Button(onClick = {}) {
             Text("Button Text")
+        }
+    }
+}
+
+@Composable
+private fun ColumnLazy(){
+    val items = mutableListOf("Name1","Name2","Name3","Name4","Name5")
+    // Vertical
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(1f),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+       items(items){ it ->
+           Text(text = it)
+       }
+    }
+}
+
+@Composable
+private fun RowLazy(){
+    val items = mutableListOf("Name1","Name2","Name3","Name4","Name5")
+    // Horizontal
+    LazyRow(
+        modifier = Modifier.fillMaxSize(1f),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        items(items){ it ->
+            Text(
+                text = it,
+                modifier = Modifier.padding(4.dp)
+            )
         }
     }
 }
