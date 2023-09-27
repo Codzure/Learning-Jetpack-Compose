@@ -1,0 +1,9 @@
+package com.codzure.jetpackcompose.ui.theme.model
+
+import androidx.annotation.DrawableRes
+
+data class Recipe(
+    @DrawableRes val imageResource: Int,
+    val title: String,
+    val ingredients: List<String>
+)
