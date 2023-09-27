@@ -7,6 +7,7 @@ import com.codzure.jetpackcompose.ui.theme.JetpackComposeLearningTheme
 import com.codzure.jetpackcompose.ui.theme.screens.ComposeAnimation
 import com.codzure.jetpackcompose.ui.theme.screens.ComposeCard
 import com.codzure.jetpackcompose.ui.theme.screens.ScreenOne
+import com.codzure.jetpackcompose.ui.theme.screens.StateManagement
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
             JetpackComposeLearningTheme(darkTheme = false) {
                 // A surface container using the 'background' color from the theme
 
-                ComposeAnimation( // Replace with the intended start screen.
+                StateManagement( // Replace with the intended start screen.
                     onBackPressed ={
                         finish()
                     }
