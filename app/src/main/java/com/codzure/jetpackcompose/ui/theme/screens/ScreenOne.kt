@@ -28,7 +28,7 @@ fun ScreenOne(
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.error,
+        color = MaterialTheme.colorScheme.background,
         border = null,
         shadowElevation = 10.dp
     ) {
@@ -126,12 +126,3 @@ private fun RowLazy(){
     }
 }
 
-
-/*
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ScreenOne {
-        MyComposableUI()
-    }
-}*/

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.codzure.jetpackcompose.ui.theme.JetpackComposeLearningTheme
+import com.codzure.jetpackcompose.ui.theme.screens.ComposeCard
 import com.codzure.jetpackcompose.ui.theme.screens.ScreenOne
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
             JetpackComposeLearningTheme(darkTheme = false) {
                 // A surface container using the 'background' color from the theme
 
-                ScreenOne(
+                ComposeCard( // Replace with the intended start screen.
                     onBackPressed ={
                         finish()
                     }
